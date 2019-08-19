@@ -1,0 +1,21 @@
+﻿@model CustomerApplication.Models.Customer
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<form action="/Home/Register" method="post">
+    <table>
+        <tr>
+            <td> Name </td><td><input type="text" name="Name" /></td>
+        </tr>
+        <tr>
+            <td> Adress </td><td><input type="text" name="Adress"</td>
+        </tr>
+    </table>
+    <input type="submit" name="Register " value="Register" />
+</form>
+
+<a href="/Home/Index">Back To Index</a>
