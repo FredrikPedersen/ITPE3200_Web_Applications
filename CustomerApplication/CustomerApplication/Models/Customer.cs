@@ -8,6 +8,6 @@ namespace CustomerApplication.Models
     public class Customer
     {
         public String Name { get; set; }
-        public String Adress { get; set;}
+        public String Address { get; set;}
     }
 }
