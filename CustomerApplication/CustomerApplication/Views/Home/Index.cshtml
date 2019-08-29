@@ -1,8 +1,27 @@
-﻿
+﻿@model  IEnumerable<CustomerApplication.Models.Customer>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-<a href="/Home/Register">Register</a><br />
-<a href="/Home/List">List</a><br />
+All customers:
+<br />
+<table>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>ID: </td>
+            <td>@k.id</td>
+            <td>Navn: </td>
+            <td>@k.Name</td>
+            <td>Adresse: </td>
+            <td>@k.Address</td>
+            <td><a href="/Home/SlettKunde?id=@k.id" class="btn btn-danger">Slett</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Home/RegisterCustomer" class="btn btn-primary">Register Customer</a>
+
+<a href="/Home/ShowCustomer" class="btn btn-primary">Show Customer</a>
+

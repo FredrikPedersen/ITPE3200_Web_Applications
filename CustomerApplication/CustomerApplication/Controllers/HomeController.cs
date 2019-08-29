@@ -1,57 +1,47 @@
-﻿using System;
+﻿using CustomerApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CustomerApplication.Controllers
+namespace Plenum_2.Controllers
 {
     public class HomeController : Controller
     {
-
-        // GET: Home
         public ActionResult Index()
         {
-            Session["Customers"] = new List<Models.Customer>();
-            return View();
-        }
-
-        public ActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Register(Models.Customer customerIn)
-        {
-            var allCustomers = (List<Models.Customer>)Session["Customers"];
-            allCustomers.Add(customerIn);
-            Session["Customers"] = allCustomers;
-
-            return RedirectToAction("List");
-        }
-
-        public ActionResult List()
-        {
-            var allCustomers = (List<Models.Customer>)Session["Customers"];
+            var db = new DB();
+            IEnumerable<Customer> allCustomers = db.Customer;
             return View(allCustomers);
         }
-
-        public ActionResult Delete(String deleteName)
+        public ActionResult ShowCustomer()
         {
-            var allCustomers = (List<Models.Customer>)Session["Customers"];
+            var db = new DB();
+            Customer aCustomer = db.Customer.Find(1);
+            return View(aCustomer);
+        }
 
-            for (var i = 0; i < allCustomers.Count; i++)
-            {
-                if (allCustomers[i].Name == deleteName)
-                {
-                    allCustomers.RemoveAt(i);
-                }
-            }
+        public ActionResult RegisterCustomer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RegisterCustomer(Customer inCustomer)
+        {
+            var db = new DB();
+            db.Customer.Add(inCustomer);
+            db.SaveChanges();
+            return RedirectToAction("index");
+        }
 
-            Session["Customers"] = allCustomers;
-
-            return RedirectToAction("List");
+        public ActionResult DeleteCustomer(int id)
+        {
+            var db = new DB();
+            Customer chosenCustomer = db.Customer.Find(id);
+            db.Customer.Remove(chosenCustomer);
+            db.SaveChanges();
+            return RedirectToAction("index");
         }
     }
 }
