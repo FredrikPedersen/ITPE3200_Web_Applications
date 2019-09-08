@@ -1,11 +1,11 @@
-﻿using CustomerApplication.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CustomerApplication.Models;
 
-namespace Plenum_2.Controllers
+namespace CustomerApplication.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,12 +14,6 @@ namespace Plenum_2.Controllers
             var db = new DB();
             IEnumerable<Customer> allCustomers = db.Customer;
             return View(allCustomers);
-        }
-        public ActionResult ShowCustomer()
-        {
-            var db = new DB();
-            Customer aCustomer = db.Customer.Find(1);
-            return View(aCustomer);
         }
 
         public ActionResult RegisterCustomer()

@@ -1,0 +1,22 @@
+﻿@model CustomerApplication.Models.Customer
+
+@{
+    ViewBag.Title = "RegisterCustomer";
+}
+
+<h2>RegisterCustomer</h2>
+<form action="/Home/RegisterCustomer" method="post">
+    <table>
+        <tr>
+            <td> Name:</td>
+            <td><input type="text" name="FirstName" /></td>
+        </tr>
+        <tr>
+            <td>Address :</td>
+            <td> <input type="text" name="Address" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="Reg" value="Register Customer" class="btn btn-default" /></td>
+        </tr>
+    </table>
+</form>

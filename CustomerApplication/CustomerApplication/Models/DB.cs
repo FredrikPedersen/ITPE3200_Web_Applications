@@ -7,7 +7,7 @@ using System.Web;
 
 namespace CustomerApplication.Models
 {
-    public class DB:DbContext
+    public class DB : DbContext
     {
         public DB() : base("name=Customer")
         {
@@ -19,6 +19,8 @@ namespace CustomerApplication.Models
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public virtual DbSet<Customer> Customer { get; set;}
+        public virtual DbSet<Customer> Customer {
+            get; set;
+        }
     }
 }

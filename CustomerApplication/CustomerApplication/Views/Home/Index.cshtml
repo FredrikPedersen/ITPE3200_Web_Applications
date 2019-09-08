@@ -4,7 +4,7 @@
 }
 
 <h2>Index</h2>
-All customers:
+Here are all the Customers:
 <br />
 <table>
     @foreach (var k in Model)
@@ -13,15 +13,12 @@ All customers:
             <td>ID: </td>
             <td>@k.id</td>
             <td>Navn: </td>
-            <td>@k.Name</td>
+            <td>@k.FirstName</td>
             <td>Adresse: </td>
             <td>@k.Address</td>
-            <td><a href="/Home/SlettKunde?id=@k.id" class="btn btn-danger">Slett</a></td>
+            <td><a href="/Home/DeleteCustomer?id=@k.id" class="btn btn-danger">Delete</a></td>
         </tr>
     }
 </table>
 
 <a href="/Home/RegisterCustomer" class="btn btn-primary">Register Customer</a>
-
-<a href="/Home/ShowCustomer" class="btn btn-primary">Show Customer</a>
-
