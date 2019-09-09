@@ -94,7 +94,7 @@ namespace CustomerApplication.Controllers
             return View();
         }
 
-        public ActionResult addExamples()
+        public ActionResult addExample()
         {
             Customer newCustomer = new Customer();
             newCustomer.FullName = "Line Jensen";
@@ -105,7 +105,7 @@ namespace CustomerApplication.Controllers
             return View();
         }
 
-        public ActionResult deleteToExample()
+        public ActionResult deleteExample()
         {
             // hent det ønskede elementet man vil slette
             Customer removalObject = db.Customer.Find(1);
