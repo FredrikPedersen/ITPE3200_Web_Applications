@@ -4,21 +4,40 @@
 }
 
 <h2>Index</h2>
-Here are all the Customers:
+Here are some data:
 <br />
-<table>
-    @foreach (var k in Model)
-    {
-        <tr>
-            <td>ID: </td>
-            <td>@k.id</td>
-            <td>Navn: </td>
-            <td>@k.FirstName</td>
-            <td>Adresse: </td>
-            <td>@k.Address</td>
-            <td><a href="/Home/DeleteCustomer?id=@k.id" class="btn btn-danger">Delete</a></td>
-        </tr>
-    }
-</table>
+@foreach (var customer in Model)
+{
+    <p>
+        Name : @customer.FullName<br />
+        Order date : @customer.Order[0].Date <br />
+        Orderline 0 product quantity : @customer.Order[0].OrderLines[0].Quantity<br />
+        Orderline 0 product name : @customer.Order[0].OrderLines[0].Product.ProductName<br />
+        Orderline 0 product price : @customer.Order[0].OrderLines[0].Product.Price<br />
+    </p>
+}
 
-<a href="/Home/RegisterCustomer" class="btn btn-primary">Register Customer</a>
+<br />
+May also be done with nested foreach-loops
+<br />
+@foreach (var customer in Model)
+{
+    <p>
+        Navn : @customer.FullName<br />
+        @foreach (var order in customer.Order)
+        {
+            <p>
+                Ordre dato : @order.Date <br />
+                @foreach (var orderlines in order.OrderLines)
+                {
+                    <p>
+                        Orderline product quantity : @orderlines.Quantity<br />
+                        Orderline product name : @orderlines.Product.ProductName<br />
+                        Orderline product price : @orderlines.Product.Price<br />
+                    </p>
+                 }
+            </p>
+        }
+        -----------------------
+     </p>
+}

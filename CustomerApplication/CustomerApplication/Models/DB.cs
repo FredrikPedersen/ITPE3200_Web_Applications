@@ -12,6 +12,8 @@ namespace CustomerApplication.Models
         public DB() : base("name=Customer")
         {
             Database.CreateIfNotExists();
+
+            Database.SetInitializer(new DBInit());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -19,8 +21,9 @@ namespace CustomerApplication.Models
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public virtual DbSet<Customer> Customer {
-            get; set;
-        }
+        public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderLine> OrderLine { get; set; }
     }
 }

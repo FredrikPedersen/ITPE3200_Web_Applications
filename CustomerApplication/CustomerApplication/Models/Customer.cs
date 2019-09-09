@@ -7,14 +7,9 @@ namespace CustomerApplication.Models
 {
     public class Customer
     {
-        public int id {
-            get; set;
-        }
-        public string FirstName {
-            get; set;
-        }
-        public string Address {
-            get; set;
-        }
+        public int Id { get; set; }
+        public string FullName { get; set; }
+
+        public virtual List<Order> Order { get; set; }
     }
 }
