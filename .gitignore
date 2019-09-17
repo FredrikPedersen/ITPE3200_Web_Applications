@@ -93,3 +93,6 @@ _[Ss]cripts
 **/.idea/**/*.iml
 **/.idea/**/contentModel.xml
 **/.idea/**/modules.xml
+
+# Course specific ignores
+LectureProjects/
