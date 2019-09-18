@@ -1,0 +1,44 @@
+﻿@model List<EF_2.Models.Kunde>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+Her er noen data:<br />
+@foreach (var kunde in Model)
+{
+    <p>
+        Navn : @kunde.Navn<br />
+        Ordre dato : @kunde.Ordre[0].Dato <br />
+        Ordrelinje 0 sitt antall varer : @kunde.Ordre[0].OrdreLinjer[0].Antall<br />
+        Ordrelinje 0 sitt varenavn : @kunde.Ordre[0].OrdreLinjer[0].Vare.Navn<br />
+        Ordrelinje 0 sitt varepris : @kunde.Ordre[0].OrdreLinjer[0].Vare.Pris<br />
+    </p>
+}
+<br/>
+Kan også gjøres mer generelt med nøsting:<br/>
+@foreach (var kunde in Model)
+{
+    <p>
+        Navn : @kunde.Navn<br />
+        @foreach(var ordre in kunde.Ordre)
+        {
+            <p>
+                Ordre dato : @ordre.Dato <br />
+                @foreach(var ordrelinjer in ordre.OrdreLinjer)
+                {
+                    <p>
+                        Ordrelinje sitt antall varer : @ordrelinjer.Antall<br />
+                        Ordrelinje sin varenavn : @ordrelinjer.Vare.Navn<br
+                                                                            />
+                        Ordrelinje sin pris : @ordrelinjer.Vare.Pris<br />
+                    </p>
+                }
+            </p>
+        }
+        -----------------------
+    </p>
+}
+
+
+
