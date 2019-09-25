@@ -24,6 +24,7 @@ _UpgradeReport_Files/
 bin/
 obj/
 TestResults/
+LectureProjects/webApps1-master/
 
 # Web publish log 
 *.Publish.xml
