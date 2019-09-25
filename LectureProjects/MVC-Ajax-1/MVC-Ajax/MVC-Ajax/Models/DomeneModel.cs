@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MVC_Ajax.Models
 {
-    public class kunde
+    public class domeneKunde
     {
         public int id { get; set; }
        

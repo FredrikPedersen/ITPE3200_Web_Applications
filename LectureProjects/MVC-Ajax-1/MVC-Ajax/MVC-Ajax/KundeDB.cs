@@ -11,9 +11,9 @@ namespace MVC_Ajax
     {
         KundeContext db = new KundeContext();
 
-        public List<kunde> hentAlleKunder()
+        public List<domeneKunde> hentAlleKunder()
         {
-            List<kunde> alleKunder = db.Kunder.Select(k => new kunde()
+            List<domeneKunde> alleKunder = db.Kunder.Select(k => new domeneKunde()
             {
                 id = k.id,
                 fornavn = k.fornavn,
@@ -25,11 +25,11 @@ namespace MVC_Ajax
             return alleKunder;
         }
 
-        public kunde hentEnKunde(int id)
+        public domeneKunde hentEnKunde(int id)
         {
             Kunde enDBKunde = db.Kunder.Find(id);
 
-            var enKunde = new kunde()
+            var enKunde = new domeneKunde()
             {
                 id = enDBKunde.id,
                 fornavn = enDBKunde.fornavn,
@@ -41,24 +41,24 @@ namespace MVC_Ajax
             return enKunde;
         }
 
-        public bool lagreEnKunde(kunde innKunde)
+        public bool lagreEnKunde(domeneKunde innDomeneKunde)
         {
             var nyKunde = new Kunde
             {
-                fornavn = innKunde.fornavn,
-                etternavn = innKunde.etternavn,
-                adresse = innKunde.adresse,
-                postnr = innKunde.postnr
+                fornavn = innDomeneKunde.fornavn,
+                etternavn = innDomeneKunde.etternavn,
+                adresse = innDomeneKunde.adresse,
+                postnr = innDomeneKunde.postnr
             };
 
-            Poststed funnetPoststed = db.Poststeder.Find(innKunde.postnr);
+            Poststed funnetPoststed = db.Poststeder.Find(innDomeneKunde.postnr);
             if (funnetPoststed == null)
             {
                 // lag poststedet
                 var nyttPoststed = new Poststed
                 {
-                    postnr = innKunde.postnr,
-                    poststed = innKunde.poststed
+                    postnr = innDomeneKunde.postnr,
+                    poststed = innDomeneKunde.poststed
                 };
                 // legg det inn i den nye kunden
                 nyKunde.poststed = nyttPoststed;

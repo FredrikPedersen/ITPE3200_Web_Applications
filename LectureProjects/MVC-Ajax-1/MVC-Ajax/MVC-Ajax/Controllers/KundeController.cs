@@ -17,11 +17,12 @@ namespace MVC_Ajax.Controllers
 
         public string hentAlleNavn()
         {
+            Console.WriteLine("GetAllRoutes is accessed");
             var db = new KundeDB();
-            List <kunde> alleKunder= db.hentAlleKunder();
+            List <domeneKunde> alleKunder= db.hentAlleKunder();
             
             var alleNavn = new List<jsKunde>();
-            foreach (kunde k in alleKunder)
+            foreach (domeneKunde k in alleKunder)
             {
                 var ettNavn = new jsKunde();
                 ettNavn.id = k.id;
@@ -36,16 +37,16 @@ namespace MVC_Ajax.Controllers
         public string hentKundeInfo(int id)
         {
             var db = new KundeDB();
-            kunde enKunde = db.hentEnKunde(id);
+            domeneKunde enDomeneKunde = db.hentEnKunde(id);
             var jsonSerializer = new JavaScriptSerializer();
-            string json = jsonSerializer.Serialize(enKunde);
+            string json = jsonSerializer.Serialize(enDomeneKunde);
             return json;
         }
 
-        public string register(kunde innKunde)
+        public string register(domeneKunde innDomeneKunde)
         {
             var db = new KundeDB();
-            db.lagreEnKunde(innKunde);
+            db.lagreEnKunde(innDomeneKunde);
             var jsonSerializer = new JavaScriptSerializer();
             return jsonSerializer.Serialize("OK");
         }
