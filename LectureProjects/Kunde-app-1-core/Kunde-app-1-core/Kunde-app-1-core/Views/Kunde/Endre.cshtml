@@ -1,0 +1,32 @@
+﻿@model Kunde_app_1_core.Models.Kunde
+<body>
+    <div>
+        <form action="/kunde/endre" method="post">
+            <input name="id" value="@Model.id" hidden />
+            <table class="table">
+                <tr>
+                    <td>Fornavn</td>
+                    <td><input name="fornavn" value="@Model.fornavn" /></td>
+                </tr>
+                <tr>
+                    <td>Etternavn</td>
+                    <td><input name="etternavn" value="@Model.etternavn" /></td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td><input name="adresse" value="@Model.adresse" /></td>
+                </tr>
+                <tr>
+                    <td>Postnr</td>
+                    <td><input name="postnr" value="@Model.postnr" /></td>
+                </tr>
+                <tr>
+                    <td>Poststed</td>
+                    <td><input name="poststed" value="@Model.poststed" /></td>
+                </tr>
+            </table>
+            <input type="submit" name="reg" value="Endre" class="btn btn-info" />
+        </form>
+    </div>
+</body>
+
