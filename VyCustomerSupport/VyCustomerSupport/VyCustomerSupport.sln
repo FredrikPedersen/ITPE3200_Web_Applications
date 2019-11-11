@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VyCustomerSupport", "VyCustomerSupport\VyCustomerSupport.csproj", "{CF693D21-0F99-4424-9D43-186E37663CD1}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VyCustomerSupport", "VyCustomerSupport\VyCustomerSupport.csproj", "{B4702AAC-45A7-498D-8C91-75B8E7E38549}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF693D21-0F99-4424-9D43-186E37663CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF693D21-0F99-4424-9D43-186E37663CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF693D21-0F99-4424-9D43-186E37663CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF693D21-0F99-4424-9D43-186E37663CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4702AAC-45A7-498D-8C91-75B8E7E38549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4702AAC-45A7-498D-8C91-75B8E7E38549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4702AAC-45A7-498D-8C91-75B8E7E38549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4702AAC-45A7-498D-8C91-75B8E7E38549}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CB3DF32-EE04-42A6-A143-F3F741EB0AA2}
 	EndGlobalSection
 EndGlobal
