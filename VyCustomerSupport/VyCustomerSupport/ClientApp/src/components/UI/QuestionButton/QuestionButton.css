@@ -1,0 +1,12 @@
+﻿.QuestionButton {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.QuestionButton:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
