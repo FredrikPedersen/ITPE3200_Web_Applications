@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VyCustomerSupport.BLL;
 using VyCustomerSupport.DAL;
+using VyCustomerSupport.DAL.Repositories;
 
 namespace VyCustomerSupport
 {
@@ -27,6 +29,8 @@ namespace VyCustomerSupport
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            services.AddScoped<QaRepository>();
+            services.AddScoped<QaBll>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
