@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import styles from "./FAQ.css";
+import "../../Styles.css";
+
+import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
 
 export class FAQ extends Component {
     static displayName = FAQ.name;
@@ -26,7 +28,7 @@ export class FAQ extends Component {
     }
 
   render() {
-      let qas = this.state.error? <p className={styles.ErrorMessage}>FAQs can't be loaded. Please check your Internet connection!</p> : <p className={styles.ErrorMessage}>LET'S DO THIS</p>
+      let qas = this.state.error? <p className="ErrorMessage">FAQs can't be loaded. Please check your Internet connection!</p> : <LoadingSpinner/>; 
         
         return (
             <div>
