@@ -1,0 +1,14 @@
+﻿.Headline {
+    margin-bottom: 30px;
+}
+
+.Headline h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.Headline p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: gray;
+}
