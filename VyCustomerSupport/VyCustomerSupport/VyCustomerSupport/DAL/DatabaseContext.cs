@@ -10,6 +10,6 @@ namespace VyCustomerSupport.DAL
             
         }
         
-        public DbSet<DbQA> QandA { get; set; }
+        public DbSet<DbQa> QandA { get; set; }
     }
 }
