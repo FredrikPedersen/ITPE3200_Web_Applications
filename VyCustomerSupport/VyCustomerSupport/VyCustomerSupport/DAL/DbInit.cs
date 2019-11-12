@@ -32,12 +32,23 @@ namespace VyCustomerSupport.DAL
                     if (QA != null)
                     {
                         var columns = QA.Split("|");
-                        var QAFromFile = new DbQA
+
+                        var upVotesFromFile = 0;
+                        var downVotesFromFile = 0;
+
+                        if (int.TryParse(columns[2], out upVotesFromFile) && int.TryParse(columns[3], out downVotesFromFile))
                         {
-                            Question = columns[0],
-                            Answer = columns[1]
-                        };
-                        dbContext.Add(QAFromFile);
+                            var QAFromFile = new DbQa
+                            {
+                                Question = columns[0],
+                                Answer = columns[1],
+                                UpVotes = upVotesFromFile,
+                                DownVotes = downVotesFromFile,
+                                Username = columns[4]
+                            };
+                            
+                            dbContext.Add(QAFromFile);
+                        }
                     }
                 }
             }
