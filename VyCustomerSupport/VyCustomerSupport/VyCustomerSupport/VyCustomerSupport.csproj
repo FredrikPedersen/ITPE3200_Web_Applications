@@ -17,10 +17,17 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
+    <Content Include="ClientApp\src\containers\FAQ\FAQ.css" />
+    <Content Include="ClientApp\src\containers\SendQuestion\SendQuestion.js" />
+    <Content Include="ClientApp\src\containers\TestingContainer\TestingContainer.js" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-    <None Include="ClientApp\src\components\NavMenu\NavMenu.css" />
-    <None Include="ClientApp\src\components\NavMenu\NavMenu.js" />
+    <None Include="ClientApp\src\components\Navigation\NavMenu.css" />
+    <None Include="ClientApp\src\components\Navigation\NavMenu.js" />
+    <None Include="ClientApp\src\containers\Home.js" />
+    <None Include="ClientApp\src\containers\FAQ\FAQ.js" />
+    <None Include="ClientApp\src\containers\Layout.js" />
+    <None Include="ClientApp\src\containers\Layout\Layout.js" />
   </ItemGroup>
 
   <ItemGroup>
