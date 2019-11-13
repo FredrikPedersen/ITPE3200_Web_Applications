@@ -17,14 +17,13 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
-    <Content Include="ClientApp\src\components\AnswerArea\AnswerArea.css" />
-    <Content Include="ClientApp\src\components\AnswerArea\AnswerArea.js" />
-    <Content Include="ClientApp\src\components\Headline\Headline.css" />
-    <Content Include="ClientApp\src\components\Headline\Headline.js" />
+    <Content Include="ClientApp\src\components\Header\Header.css" />
+    <Content Include="ClientApp\src\components\Header\Header.js" />
     <Content Include="ClientApp\src\components\Navigation\NavMenu.css" />
     <Content Include="ClientApp\src\components\Navigation\NavMenu.js" />
-    <Content Include="ClientApp\src\components\UI\QuestionButton\QuestionButton.css" />
-    <Content Include="ClientApp\src\components\UI\QuestionButton\QuestionButton.js" />
+    <Content Include="ClientApp\src\components\QuestionAndAnswer\QuestionAndAnswer.css" />
+    <Content Include="ClientApp\src\components\QuestionAndAnswer\QuestionAndAnswer.js" />
+    <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionsAndAnswers.js" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.css" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.js" />
     <Content Include="ClientApp\src\containers\FAQ\FAQ.css" />
