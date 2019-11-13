@@ -26,7 +26,6 @@
     <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionsAndAnswers.js" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.css" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.js" />
-    <Content Include="ClientApp\src\containers\FAQ\FAQ.css" />
     <Content Include="ClientApp\src\containers\FAQ\FAQ.js" />
     <Content Include="ClientApp\src\containers\Layout\Layout.js" />
     <Content Include="ClientApp\src\containers\SendQuestion\SendQuestion.js" />

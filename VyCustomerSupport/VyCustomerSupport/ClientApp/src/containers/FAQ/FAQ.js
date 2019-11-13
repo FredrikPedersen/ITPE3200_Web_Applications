@@ -1,12 +1,12 @@
 ﻿import React, {Component} from 'react';
 import "../../Styles.css";
-import "./FAQ.css"
 
 import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
 import Header from "../../components/Header/Header";
 import QuestionsAndAnswers from "../../components/QuestionsAndAnswers/QuestionsAndAnswers";
 
-const FAQ_INFO_TEXT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+const FAQ_INFO_TEXT = "Hva lurer du på? Velg tema og finn svar på alt fra hvem som kan få rabatt og hvordan du søker om refusjon til hvordan appen fungerer og hva slags bagasje du kan ta med om bord. ";
+const TITLE = "Spørsmål og Svar";
 
 export class FAQ extends Component {
     static displayName = FAQ.name;
@@ -51,7 +51,7 @@ export class FAQ extends Component {
             <div className="ContentArea">
                 <Header
                     infoText={FAQ_INFO_TEXT}
-                >Frequently Asked Questions</Header>
+                >{TITLE}</Header>
                 {qas}
             </div>
         );

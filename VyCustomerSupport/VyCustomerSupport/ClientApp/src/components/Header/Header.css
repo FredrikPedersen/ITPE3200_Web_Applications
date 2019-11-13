@@ -1,14 +1,15 @@
 ﻿.Header {
-    margin-bottom: 30px;
+    margin-bottom: 2em;
 }
 
 .Header h1 {
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .Header p {
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     color: gray;
 }

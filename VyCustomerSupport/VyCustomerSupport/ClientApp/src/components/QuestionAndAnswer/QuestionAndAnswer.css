@@ -1,11 +1,29 @@
 ﻿.QuestionButton {
-    
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: 1px solid gray;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.QuestionButton img {
+    width: 40px;
+    float: right;
 }
 
 .Question {
-    
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: 1px solid gray;
+    padding: 0.5em;
+}
+
+.Question img {
+    width: 40px;
+    float: right;
 }
 
 .Answer {
-    
+    margin-bottom: 1em;
+    padding: 0.5em;
 }
