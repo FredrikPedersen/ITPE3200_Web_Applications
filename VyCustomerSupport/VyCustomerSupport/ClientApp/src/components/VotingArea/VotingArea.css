@@ -1,0 +1,24 @@
+﻿.VotingArea {
+    margin-top: 2em;
+    font-size: 0.8em;
+    display: flex;
+}
+
+.VotingArea img {
+    width: 2em;
+    height: 2em;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+.Positive {
+    margin-left: 0.5em;
+    color: green;
+    width: 10%;
+}
+
+.Negative {
+    margin-left: 0.5em;
+    color: red;
+    width: 10%;
+}
