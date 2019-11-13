@@ -1,13 +1,13 @@
-﻿.Headline {
+﻿.Header {
     margin-bottom: 30px;
 }
 
-.Headline h1 {
+.Header h1 {
     font-size: 3rem;
     font-weight: bold;
 }
 
-.Headline p {
+.Header p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: gray;

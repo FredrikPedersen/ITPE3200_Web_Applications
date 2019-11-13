@@ -1,11 +1,11 @@
 ﻿﻿import React from "react";
-import "./Headline.css";
+import "./Header.css";
 
-const headline = (props) => (
-    <div className="Headline">
+const header = (props) => (
+    <div className="Header">
         <h1>{props.children}</h1>
         <p>{props.infoText}</p>
     </div>
 );
 
-export default headline;
+export default header;
