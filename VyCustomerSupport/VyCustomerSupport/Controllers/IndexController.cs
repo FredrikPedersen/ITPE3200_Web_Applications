@@ -23,6 +23,18 @@ namespace VyCustomerSupport.Controllers
         {
             return _qaBll.GetAllQa();
         }
+
+        [Route("upvote/{id}")]
+        public bool PostUpVote(int id)
+        {
+            return _qaBll.UpVote(id);
+        }
+
+        [Route("downvote/{id}")]
+        public bool PostDownVote(int id)
+        {
+            return _qaBll.DownVote(id);
+        }
         
     }
 }

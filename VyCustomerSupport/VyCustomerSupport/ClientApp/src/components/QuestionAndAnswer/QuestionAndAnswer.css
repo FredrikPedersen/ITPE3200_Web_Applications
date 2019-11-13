@@ -1,9 +1,16 @@
 ﻿.QuestionButton {
     font-size: 1.2rem;
     font-weight: bold;
-    border-top: 1px solid gray;
     margin-bottom: 1em;
     padding: 0.5em;
+    border-top: 1px solid gray;
+}
+
+.QandABox {
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-top: 1px solid gray;
 }
 
 .QuestionButton img {
@@ -14,8 +21,7 @@
 .Question {
     font-size: 1.2rem;
     font-weight: bold;
-    border-top: 1px solid gray;
-    padding: 0.5em;
+    margin-bottom: 0.7em;
 }
 
 .Question img {
@@ -24,6 +30,5 @@
 }
 
 .Answer {
-    margin-bottom: 1em;
-    padding: 0.5em;
+    margin-bottom: 0.7em;
 }

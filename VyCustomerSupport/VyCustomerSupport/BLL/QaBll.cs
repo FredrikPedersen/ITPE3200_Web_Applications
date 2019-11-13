@@ -17,5 +17,15 @@ namespace VyCustomerSupport.BLL
         {
             return _qaRepository.GetAllQa();
         }
+
+        public bool UpVote(int id)
+        {
+            return _qaRepository.UpVote(id);
+        }
+
+        public bool DownVote(int id)
+        {
+            return _qaRepository.DownVote(id);
+        }
     }
 }
