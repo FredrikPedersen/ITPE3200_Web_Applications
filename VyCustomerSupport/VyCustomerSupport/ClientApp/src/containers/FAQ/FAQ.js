@@ -17,14 +17,14 @@ export class FAQ extends Component {
 
         this.state = {
             qas: [],
-            loading: false,
+            loading: true,
             error: false
         };
 
         fetch("api/index/qas")
             .then(response => response.json())
             .then(qas => {
-                this.setState({qas: qas});
+                this.setState({qas: qas, loading: false});
             })
             .catch(error => {
                 this.setState({error: true});
@@ -39,13 +39,12 @@ export class FAQ extends Component {
     }
 
     render() {
-        let qas = this.state.error ?
-            <p className="ErrorMessage">FAQs can't be loaded. Please check your Internet connection!</p> :
-            <LoadingSpinner/>;
+        let qas =
+            this.state.error ?
+                <p className="ErrorMessage">FAQs can't be loaded. Please check your Internet connection!</p> :
+                this.state.loading ? <LoadingSpinner/> :
+                    this.qaContent();
 
-        if (this.state.qas) {
-            qas = this.qaContent();
-        }
 
         return (
             <div className="ContentArea">
