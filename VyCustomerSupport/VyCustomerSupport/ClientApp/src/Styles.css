@@ -8,3 +8,35 @@
 .ContentArea {
     width: 70%;
 }
+
+.Info {
+    margin: 0.5em 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: gray;
+}
+
+.FormSubmitButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #5C9210;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.FormSubmitButton:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.ClearButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
