@@ -43,8 +43,7 @@ namespace VyCustomerSupport.DAL
                                 Question = columns[0],
                                 Answer = columns[1],
                                 UpVotes = upVotesFromFile,
-                                DownVotes = downVotesFromFile,
-                                Username = columns[4]
+                                DownVotes = downVotesFromFile
                             };
                             
                             dbContext.Add(QAFromFile);
