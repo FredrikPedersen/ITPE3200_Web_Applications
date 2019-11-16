@@ -33,6 +33,7 @@
     <Content Include="ClientApp\src\containers\FAQ\FAQ.js" />
     <Content Include="ClientApp\src\containers\Layout\Layout.js" />
     <Content Include="ClientApp\src\containers\SendQuestion\SendQuestion.js" />
+    <Content Include="ClientApp\src\containers\UserQuestions\UserQuestions.js" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>

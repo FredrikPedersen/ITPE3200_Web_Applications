@@ -117,19 +117,19 @@ export class SendQuestion extends Component {
         
         for (let formElementIdentifier in this.state.questionForm) {
             formData[formElementIdentifier] = this.state.questionForm[formElementIdentifier].value;
-            console.log("CURRENT FORMDATA: " + formData[formElementIdentifier])
         }
+        
+        const data = {Username: formData.Brukernavn, Email: formData.Mailadresse, Question: formData.Spørsmål, UpVotes: 0, DownVotes: 0};
 
         fetch("api/index/sendquestion/", {
             method: "Post",
-            body: JSON.stringify(formData),
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json"
             }
         })
             .then(response =>  {
                 response.json();
-                console.log("RESPONSE: " + JSON.stringify(response));
                 this.setState({loading: false});
             })
             .catch(error => this.setState({error: true}));
@@ -145,6 +145,7 @@ export class SendQuestion extends Component {
             });
         }
         
+        //TODO REMEMBER TO SET AN ERROR MESSAGE!
         let form;
         this.state.loading ? form = <Spinner /> : form = (
             <form onSubmit={this.formSubmissionHandler}>

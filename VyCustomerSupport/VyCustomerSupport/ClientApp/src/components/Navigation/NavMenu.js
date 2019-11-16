@@ -36,7 +36,10 @@ export class NavMenu extends Component {
                                     <NavLink tag={Link} className="text-dark" to="/faq">FAQ</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/send-question">Send inn Spørsmål</NavLink>
+                                    <NavLink tag={Link} className="text-dark" to="/innsendte-spørsmål">Innsendte Spørsmål</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} className="text-dark" to="/send-spørsmål">Send inn Spørsmål</NavLink>
                                 </NavItem>
                             </ul>
                         </Collapse>
