@@ -1,7 +1,7 @@
 ﻿import React, {Component} from "react";
 import "./QuestionAndAnswer.css";
 
-import VotingArea from "../VotingArea/VotingArea";
+import VotingArea from "../../VotingArea/VotingArea";
 
 class QuestionAndAnswer extends Component {
     state = {

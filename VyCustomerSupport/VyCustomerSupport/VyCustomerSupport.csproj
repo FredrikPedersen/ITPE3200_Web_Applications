@@ -17,23 +17,25 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
-    <Content Include="ClientApp\src\components\Header\Header.css" />
-    <Content Include="ClientApp\src\components\Header\Header.js" />
     <Content Include="ClientApp\src\components\Navigation\NavMenu.css" />
     <Content Include="ClientApp\src\components\Navigation\NavMenu.js" />
-    <Content Include="ClientApp\src\components\QuestionAndAnswer\QuestionAndAnswer.css" />
-    <Content Include="ClientApp\src\components\QuestionAndAnswer\QuestionAndAnswer.js" />
+    <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\QuestionAndAnswer.css" />
+    <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\QuestionAndAnswer.js" />
     <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionsAndAnswers.js" />
+    <Content Include="ClientApp\src\components\UI\Header\Header.css" />
+    <Content Include="ClientApp\src\components\UI\Header\Header.js" />
     <Content Include="ClientApp\src\components\UI\InputElement\InputElement.css" />
     <Content Include="ClientApp\src\components\UI\InputElement\InputElement.js" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.css" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.js" />
+    <Content Include="ClientApp\src\components\UserQuesions\UserQuestions.js" />
+    <Content Include="ClientApp\src\components\UserQuesions\UserQuestion\UserQuestion.js" />
     <Content Include="ClientApp\src\components\VotingArea\VotingArea.css" />
     <Content Include="ClientApp\src\components\VotingArea\VotingArea.js" />
     <Content Include="ClientApp\src\containers\FAQ\FAQ.js" />
     <Content Include="ClientApp\src\containers\Layout\Layout.js" />
     <Content Include="ClientApp\src\containers\SendQuestion\SendQuestion.js" />
-    <Content Include="ClientApp\src\containers\UserQuestions\UserQuestions.js" />
+    <Content Include="ClientApp\src\containers\SentInQuestions\SentInQuestions.js" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>

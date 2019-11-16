@@ -1,6 +1,6 @@
 ﻿﻿import React, {Component} from "react";
 import "../../Styles.css";
-import Header from "../../components/Header/Header";
+import Header from "../../components/UI/Header/Header";
 import InputElement from "../../components/UI/InputElement/InputElement";
 import Spinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
 

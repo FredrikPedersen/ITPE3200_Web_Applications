@@ -2,7 +2,7 @@
 import "../../Styles.css";
 
 import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
-import Header from "../../components/Header/Header";
+import Header from "../../components/UI/Header/Header";
 import QuestionsAndAnswers from "../../components/QuestionsAndAnswers/QuestionsAndAnswers";
 
 const FAQ_INFO_TEXT = "Hva lurer du på? Her finner du svar på spørsmål som vi har besvart";
