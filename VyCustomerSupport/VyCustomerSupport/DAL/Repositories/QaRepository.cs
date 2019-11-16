@@ -15,31 +15,9 @@ namespace VyCustomerSupport.DAL.Repositories
             _databaseContext = databaseContext;
         }
 
-        public bool AddQa(RepositoryQa qa)
-        {
-            var newQa = new DbQa
-            {
-                Question = qa.Question,
-                Answer = qa.Answer
-            };
-
-            try
-            {
-                _databaseContext.QandA.Add(newQa);
-                _databaseContext.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            
-        }
-
         public List<RepositoryQa> GetAllQa()
         {
-            return _databaseContext.QandA
-                .Where(qa => qa.Answer != null)
+            return _databaseContext.QandAs
                 .OrderBy(qa => qa.Id)
                 .Select(qa => DbToRepository(qa))
                 .ToList();
@@ -49,7 +27,7 @@ namespace VyCustomerSupport.DAL.Repositories
         {
             try
             {
-                var qa = _databaseContext.QandA.FirstOrDefault(q => q.Id == id);
+                var qa = _databaseContext.QandAs.FirstOrDefault(q => q.Id == id);
                 if (qa != null) qa.UpVotes += 1;
                 _databaseContext.SaveChanges();
                 return true;
@@ -64,7 +42,7 @@ namespace VyCustomerSupport.DAL.Repositories
         {
             try
             {
-                var qa = _databaseContext.QandA.FirstOrDefault(q => q.Id == id);
+                var qa = _databaseContext.QandAs.FirstOrDefault(q => q.Id == id);
                 if (qa != null) qa.DownVotes += 1;
                 _databaseContext.SaveChanges();
                 return true;
