@@ -1,21 +1,18 @@
-﻿import React, {PureComponent} from "react";
-import QuestionAndAnswer from "../QuestionAndAnswer/QuestionAndAnswer";
+﻿import React from "react";
+import QuestionAndAnswer from "./QuestionAndAnswer/QuestionAndAnswer";
 
-class QuestionsAndAnswers extends PureComponent {
-    render() {
-        return this.props.questionsAndAnswers.map(qaa => {
-            console.log(qaa);
-            return (
-                <QuestionAndAnswer
-                    key={qaa.id}
-                    id={qaa.id}
-                    question={qaa.question}
-                    answer={qaa.answer}
-                    upVotes={qaa.upVotes}
-                    downVotes={qaa.downVotes}/>
-            )
-        })
-    }
-}
+const questionsAndAnswers = (props) => {
+    return props.questionsAndAnswers.map(qaa => {
+        return (
+            <QuestionAndAnswer
+                key={qaa.id}
+                id={qaa.id}
+                question={qaa.question}
+                answer={qaa.answer}
+                upVotes={qaa.upVotes}
+                downVotes={qaa.downVotes}/>
+        )
+    })
+};
 
-export default QuestionsAndAnswers;
+export default questionsAndAnswers;
