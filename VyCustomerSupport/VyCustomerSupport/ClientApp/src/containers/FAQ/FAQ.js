@@ -5,7 +5,7 @@ import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
 import Header from "../../components/Header/Header";
 import QuestionsAndAnswers from "../../components/QuestionsAndAnswers/QuestionsAndAnswers";
 
-const FAQ_INFO_TEXT = "Hva lurer du på? Velg tema og finn svar på alt fra hvem som kan få rabatt og hvordan du søker om refusjon til hvordan appen fungerer og hva slags bagasje du kan ta med om bord. ";
+const FAQ_INFO_TEXT = "Hva lurer du på? Her finner du svar på spørsmål som vi har besvart";
 const TITLE = "Spørsmål og Svar";
 
 export class FAQ extends Component {
