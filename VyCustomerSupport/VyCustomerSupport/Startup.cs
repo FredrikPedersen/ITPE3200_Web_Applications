@@ -30,7 +30,9 @@ namespace VyCustomerSupport
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
             services.AddScoped<QaRepository>();
+            services.AddScoped<UserQuestionRepository>();
             services.AddScoped<QaBll>();
+            services.AddScoped<UserQuestionBll>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
