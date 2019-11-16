@@ -28,7 +28,9 @@
     <Content Include="ClientApp\src\components\UI\InputElement\InputElement.js" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.css" />
     <Content Include="ClientApp\src\components\UI\LoadingSpinner\LoadingSpinner.js" />
+    <Content Include="ClientApp\src\components\UI\ToastDismissable\ToastDismissable.js" />
     <Content Include="ClientApp\src\components\UserQuesions\UserQuestions.js" />
+    <Content Include="ClientApp\src\components\UserQuesions\UserQuestion\UserQuestion.css" />
     <Content Include="ClientApp\src\components\UserQuesions\UserQuestion\UserQuestion.js" />
     <Content Include="ClientApp\src\components\VotingArea\VotingArea.css" />
     <Content Include="ClientApp\src\components\VotingArea\VotingArea.js" />
