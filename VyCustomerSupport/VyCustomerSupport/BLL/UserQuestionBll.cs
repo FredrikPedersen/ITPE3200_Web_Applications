@@ -18,6 +18,11 @@ namespace VyCustomerSupport.BLL
             return _qRepository.GetAllUserQuestions();
         }
 
+        public bool AddUserQuestion(RepositoryUserQuestion question)
+        {
+            return _qRepository.AddUserQuestion(question);
+        }
+
         public bool UpVote(int id)
         {
             return _qRepository.UpVote(id);

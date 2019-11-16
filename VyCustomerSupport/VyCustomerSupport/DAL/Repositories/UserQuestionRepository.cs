@@ -14,7 +14,7 @@ namespace VyCustomerSupport.DAL.Repositories
             _databaseContext = databaseContext;
         }
 
-        public bool AddQa(RepositoryUserQuestion q)
+        public bool AddUserQuestion(RepositoryUserQuestion q)
         {
             var newUserQuestion = new DbUserQuestion
             {
