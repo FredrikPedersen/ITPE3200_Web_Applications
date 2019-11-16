@@ -16,7 +16,7 @@ namespace VyCustomerSupport.DAL
             var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
             dbContext.Database.EnsureCreated();
 
-            if (!dbContext.QandA.Any())
+            if (!dbContext.QandAs.Any())
             {
                 SeedQandA(dbContext);
             }
