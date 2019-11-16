@@ -26,6 +26,12 @@ namespace VyCustomerSupport.Controllers
             return _qaBll.GetAllQa();
         }
 
+        [Route("userquestions")]
+        public List<RepositoryUserQuestion> GetUserQuestions()
+        {
+            return _qBll.GetAllUserQuestions();
+        }
+
         [Route("upvote/{id}")]
         public bool PostUpVote(int id)
         {
