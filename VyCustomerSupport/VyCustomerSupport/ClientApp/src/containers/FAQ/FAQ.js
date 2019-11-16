@@ -10,8 +10,7 @@ const TITLE = "Spørsmål og Svar";
 
 export class FAQ extends Component {
     static displayName = FAQ.name;
-
-
+    
     constructor(props) {
         super(props);
 
@@ -41,7 +40,7 @@ export class FAQ extends Component {
     render() {
         let qas =
             this.state.error ?
-                <p className="ErrorMessage">FAQs can't be loaded. Please check your Internet connection!</p> :
+                <p className="ErrorMessage">Kan ikke laste inn spørsmål og svar. Vennligst kontroller Internetttilgangen </p> :
                 this.state.loading ? <LoadingSpinner/> :
                     this.qaContent();
 

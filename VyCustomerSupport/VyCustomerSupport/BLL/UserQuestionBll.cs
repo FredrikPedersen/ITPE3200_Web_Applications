@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using VyCustomerSupport.DAL.Repositories;
 using VyCustomerSupport.Models.RepositoryModels;
 
@@ -21,16 +22,6 @@ namespace VyCustomerSupport.BLL
         public bool AddUserQuestion(RepositoryUserQuestion question)
         {
             return _qRepository.AddUserQuestion(question);
-        }
-
-        public bool UpVote(int id)
-        {
-            return _qRepository.UpVote(id);
-        }
-
-        public bool DownVote(int id)
-        {
-            return _qRepository.DownVote(id);
         }
     }
 }

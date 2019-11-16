@@ -7,9 +7,8 @@ namespace VyCustomerSupport.Models.DbModels
         [Key]
         public int Id { get; set; }
         public string Username { get; set; }
+        
         public string Email { get; set; }
         public string Question { get; set; }
-        public int Upvotes { get; set; }
-        public int Downvotes { get; set; }
     }
 }

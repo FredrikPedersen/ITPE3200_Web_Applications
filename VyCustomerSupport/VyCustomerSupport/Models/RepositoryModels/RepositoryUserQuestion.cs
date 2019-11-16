@@ -12,14 +12,8 @@ namespace VyCustomerSupport.Models.RepositoryModels
         
         [Required]
         public string Email { get; set; }
-        
+
         [Required]
         public string Question { get; set; }
-        
-        [Required]
-        public int Upvotes { get; set; }
-        
-        [Required]
-        public int Downvotes { get; set; }
     }
 }
