@@ -38,14 +38,10 @@ namespace VyCustomerSupport.Controllers
             return _qaBll.DownVote(id);
         }
 
-        //TODO NOT FINISHED! This is just a shell to se if the post request gets through.
         [Route("sendquestion")]
-        public bool PostQuestion([FromBody] RepositoryQuestion question)
+        public bool PostQuestion([FromBody] RepositoryUserQuestion userQuestion)
         {
-            Console.WriteLine("POST QUESTION IS CALLED");
-            Console.WriteLine("POST QUESTION DATA: " + question);
-            Console.WriteLine("POST QUESTION DATA PRINT FINISHED");
-            return false;
+            return ModelState.IsValid && _qBll.AddUserQuestion(userQuestion);
         }
         
     }
