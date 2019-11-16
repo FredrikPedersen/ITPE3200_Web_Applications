@@ -12,10 +12,12 @@ namespace VyCustomerSupport.Controllers
     public class IndexController : Controller
     {
         private readonly QaBll _qaBll;
+        private readonly UserQuestionBll _qBll;
 
-        public IndexController(QaBll qaBll)
+        public IndexController(QaBll qaBll, UserQuestionBll qBll)
         {
             _qaBll = qaBll;
+            _qBll = qBll;
         }
 
         [Route("qas")]
