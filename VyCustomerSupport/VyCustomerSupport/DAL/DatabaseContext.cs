@@ -11,6 +11,7 @@ namespace VyCustomerSupport.DAL
         }
         
         public DbSet<DbQa> QandAs { get; set; }
+        public DbSet<DbCategory> Categories { get; set; }
         public DbSet<DbUserQuestion> UserQuestions { get; set; }
     }
 }

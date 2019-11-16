@@ -14,5 +14,7 @@ namespace VyCustomerSupport.Models.RepositoryModels
         public int UpVotes { get; set; }
         [Required]
         public int DownVotes { get; set; }
+        
+        public RepositoryCategory Category { get; set; }
     }
 }

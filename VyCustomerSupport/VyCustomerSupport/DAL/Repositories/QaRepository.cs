@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using VyCustomerSupport.Models.DbModels;
 using VyCustomerSupport.Models.RepositoryModels;
 
@@ -17,8 +18,16 @@ namespace VyCustomerSupport.DAL.Repositories
         public List<RepositoryQa> GetAllQa()
         {
             return _databaseContext.QandAs
-                .OrderBy(qa => qa.Id)
-                .Select(qa => DbToRepository(qa))
+                .Include(c => c.Category)
+                .OrderBy(qa => qa.Category.Id)
+                .Select(qa => DbToRepositoryQa(qa))
+                .ToList();
+        }
+
+        public List<RepositoryCategory> GetAllCategories()
+        {
+            return _databaseContext.Categories
+                .Select(category => DbToRepositoryCategory(category))
                 .ToList();
         }
 
@@ -52,7 +61,7 @@ namespace VyCustomerSupport.DAL.Repositories
             }
         }
 
-        private RepositoryQa DbToRepository(DbQa dbQa)
+        private RepositoryQa DbToRepositoryQa(DbQa dbQa)
         {
             return new RepositoryQa
             {
@@ -61,6 +70,16 @@ namespace VyCustomerSupport.DAL.Repositories
                 Answer = dbQa.Answer,
                 UpVotes = dbQa.UpVotes,
                 DownVotes = dbQa.DownVotes
+            };
+        }
+
+        private RepositoryCategory DbToRepositoryCategory(DbCategory dbCategory)
+        {
+            return new RepositoryCategory
+            {
+                Id = dbCategory.Id,
+                CategoryName = dbCategory.CategoryName,
+                CategoryItems = dbCategory.CategoryItems.ToList()
             };
         }
 

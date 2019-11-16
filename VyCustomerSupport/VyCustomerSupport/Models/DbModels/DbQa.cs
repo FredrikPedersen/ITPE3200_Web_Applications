@@ -10,6 +10,8 @@ namespace VyCustomerSupport.Models.DbModels
         public string Answer { get; set; }
         public int UpVotes { get; set; } 
         public int DownVotes { get; set; }
+        
+        public virtual DbCategory Category { get; set; }
 
     }
 }

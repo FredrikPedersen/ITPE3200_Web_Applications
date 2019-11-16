@@ -18,6 +18,11 @@ namespace VyCustomerSupport.BLL
             return _qaRepository.GetAllQa();
         }
 
+        public List<RepositoryCategory> GetAllCategories()
+        {
+            return _qaRepository.GetAllCategories();
+        }
+
         public bool UpVote(int id)
         {
             return _qaRepository.UpVote(id);
