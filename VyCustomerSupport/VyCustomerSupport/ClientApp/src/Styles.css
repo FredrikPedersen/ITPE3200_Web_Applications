@@ -1,4 +1,9 @@
-﻿.ErrorMessage {
+﻿html {
+    /*Editor says this scrollbar-width doesen't exist, but this works */
+    scrollbar-width: none; /*Hides scrollbar in Firefox*/
+}
+
+.ErrorMessage {
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
@@ -40,4 +45,8 @@
     font-weight: bold;
     font-size: 1.2em;
     margin: 1em 0;
+}
+
+::-webkit-scrollbar {
+    display: none; /*Hides scrollbar in all browsers except Firefox */
 }
