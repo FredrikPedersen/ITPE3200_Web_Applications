@@ -1,0 +1,33 @@
+﻿.CategoryBox {
+    width: 45%;
+    display: inline-flex;
+    color: white;
+    margin: 0 1em 0.5em 0;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 64px 0 64px 16px;
+    transition: all .2s ease-in-out;
+}
+
+.GreenBackground {
+    background-color: #01876F;
+}
+
+.RedBackground {
+    background-color: #870101;
+}
+
+.YellowBackground {
+    background-color: #bfb608;
+}
+
+.BlueBackground {
+    background-color: #017587;
+}
+
+.CategoryBox:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
