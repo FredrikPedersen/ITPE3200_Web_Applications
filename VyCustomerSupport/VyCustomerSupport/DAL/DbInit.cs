@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using VyCustomerSupport.Models.DbModels;
 
@@ -15,6 +12,11 @@ namespace VyCustomerSupport.DAL
             var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
             dbContext.Database.EnsureCreated();
 
+            if (!dbContext.Categories.Any())
+            {
+                SeedCategories(dbContext);
+            }
+
             if (!dbContext.QandAs.Any())
             {
                 SeedQandA(dbContext);
@@ -24,6 +26,21 @@ namespace VyCustomerSupport.DAL
             {
                 SeedUserQuestions(dbContext);
             }
+        }
+
+        private static void SeedCategories(DatabaseContext dbContext)
+        {
+            var newCategory = new DbCategory {CategoryName = "Billetter"};
+            dbContext.Add(newCategory);
+
+            newCategory = new DbCategory {CategoryName = "Endring og Refusjon"};
+            dbContext.Add(newCategory);
+
+            newCategory = new DbCategory {CategoryName = "Bagasje"};
+            dbContext.Add(newCategory);
+
+            newCategory = new DbCategory {CategoryName = "Vy-Appen"};
+            dbContext.Add(newCategory);
         }
 
         private static void SeedQandA(DatabaseContext dbContext)
@@ -37,6 +54,9 @@ namespace VyCustomerSupport.DAL
                     {
                         var columns = QA.Split("|");
 
+                        var categoryTitleFromFile = columns[4];
+                        var category = dbContext.Categories.FirstOrDefault(c => c.CategoryName == categoryTitleFromFile);
+                        
                         var upVotesFromFile = 0;
                         var downVotesFromFile = 0;
 
@@ -48,7 +68,8 @@ namespace VyCustomerSupport.DAL
                                 Question = columns[0],
                                 Answer = columns[1],
                                 UpVotes = upVotesFromFile,
-                                DownVotes = downVotesFromFile
+                                DownVotes = downVotesFromFile,
+                                Category = category
                             };
 
                             dbContext.Add(QAFromFile);
