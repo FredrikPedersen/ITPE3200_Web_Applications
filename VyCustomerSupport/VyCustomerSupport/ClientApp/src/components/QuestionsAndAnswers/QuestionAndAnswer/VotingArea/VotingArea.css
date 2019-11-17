@@ -9,6 +9,11 @@
     height: 2em;
     margin-left: 0.5em;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.VotingArea img:hover {
+    transform: scale(1.1);
 }
 
 .Positive {
