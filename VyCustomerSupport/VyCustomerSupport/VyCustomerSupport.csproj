@@ -24,6 +24,8 @@
     <Content Include="ClientApp\src\components\Navigation\NavMenu.js" />
     <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\QuestionAndAnswer.css" />
     <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\QuestionAndAnswer.js" />
+    <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\VotingArea\VotingArea.css" />
+    <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionAndAnswer\VotingArea\VotingArea.js" />
     <Content Include="ClientApp\src\components\QuestionsAndAnswers\QuestionsAndAnswers.js" />
     <Content Include="ClientApp\src\components\UI\Header\Header.css" />
     <Content Include="ClientApp\src\components\UI\Header\Header.js" />
@@ -35,8 +37,6 @@
     <Content Include="ClientApp\src\components\UserQuesions\UserQuestions.js" />
     <Content Include="ClientApp\src\components\UserQuesions\UserQuestion\UserQuestion.css" />
     <Content Include="ClientApp\src\components\UserQuesions\UserQuestion\UserQuestion.js" />
-    <Content Include="ClientApp\src\components\VotingArea\VotingArea.css" />
-    <Content Include="ClientApp\src\components\VotingArea\VotingArea.js" />
     <Content Include="ClientApp\src\containers\FAQ\FAQ.js" />
     <Content Include="ClientApp\src\containers\Layout\Layout.js" />
     <Content Include="ClientApp\src\containers\SendQuestion\SendQuestion.js" />
