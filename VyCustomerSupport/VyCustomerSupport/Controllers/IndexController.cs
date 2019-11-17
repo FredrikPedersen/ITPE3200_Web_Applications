@@ -20,6 +20,12 @@ namespace VyCustomerSupport.Controllers
             _qBll = qBll;
         }
 
+        [Route("categories")]
+        public List<RepositoryCategory> GetCategories()
+        {
+            return _qaBll.GetAllCategories();
+        }
+
         [Route("qas")]
         public List<RepositoryQa> GetQas()
         {
