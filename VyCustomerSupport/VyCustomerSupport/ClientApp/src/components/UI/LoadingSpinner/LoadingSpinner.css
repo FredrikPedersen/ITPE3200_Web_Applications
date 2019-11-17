@@ -1,4 +1,5 @@
-﻿﻿.Loader {
+﻿/* Taken from https://projects.lukehaas.me/css-loaders/ */﻿
+.Loader {
     color: #01876F;
     font-size: 90px;
     text-indent: -9999em;
