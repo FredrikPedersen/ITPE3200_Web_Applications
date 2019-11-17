@@ -79,7 +79,6 @@ namespace VyCustomerSupport.DAL.Repositories
             {
                 Id = dbCategory.Id,
                 CategoryName = dbCategory.CategoryName,
-                CategoryItems = dbCategory.CategoryItems.ToList()
             };
         }
 
