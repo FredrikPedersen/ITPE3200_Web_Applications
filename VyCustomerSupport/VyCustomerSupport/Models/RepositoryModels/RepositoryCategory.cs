@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using VyCustomerSupport.Models.DbModels;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace VyCustomerSupport.Models.RepositoryModels
 {
@@ -11,7 +9,5 @@ namespace VyCustomerSupport.Models.RepositoryModels
         
         [Required]
         public string CategoryName { get; set; }
-        
-        public List<DbQa> CategoryItems { get; set; }
     }
 }
