@@ -84,6 +84,7 @@ export class FAQ extends Component {
                 {categories}
                 <div style={{width: "100%", paddingTop: "3em"}}></div> {/*Empty div to create space */}
                 {qas}
+                <div style={{width: "100%", paddingTop: "3em"}}></div> {/*Empty div to create space */}
             </div>
         );
     }
