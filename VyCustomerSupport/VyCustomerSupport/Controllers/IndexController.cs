@@ -32,6 +32,12 @@ namespace VyCustomerSupport.Controllers
             return _qaBll.GetAllQa();
         }
 
+        [Route("qaswithcategory")]
+        public List<RepositoryQa> GetQaWithCategory(string category)
+        {
+            return _qaBll.GetQaWithCategory(category);
+        }
+
         [Route("userquestions")]
         public List<RepositoryUserQuestion> GetUserQuestions()
         {

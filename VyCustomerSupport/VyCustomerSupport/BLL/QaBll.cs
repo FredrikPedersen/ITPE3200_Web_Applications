@@ -18,6 +18,11 @@ namespace VyCustomerSupport.BLL
             return _qaRepository.GetAllQa();
         }
 
+        public List<RepositoryQa> GetQaWithCategory(string category)
+        {
+            return _qaRepository.GetQaWithCategory(category);
+        }
+
         public List<RepositoryCategory> GetAllCategories()
         {
             return _qaRepository.GetAllCategories();
