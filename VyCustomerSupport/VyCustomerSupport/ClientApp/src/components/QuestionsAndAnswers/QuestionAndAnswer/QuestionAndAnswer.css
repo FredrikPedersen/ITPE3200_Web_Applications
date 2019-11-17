@@ -16,6 +16,11 @@
 .QuestionButton img {
     width: 40px;
     float: right;
+    transition: all .2s ease-in-out;
+}
+
+.QuestionButton img:hover {
+    transform: scale(1.1);
 }
 
 .Question {
@@ -27,6 +32,11 @@
 .Question img {
     width: 40px;
     float: right;
+    transition: all .2s ease-in-out;
+}
+
+.Question img:hover {
+    transform: scale(1.1);
 }
 
 .Answer {
