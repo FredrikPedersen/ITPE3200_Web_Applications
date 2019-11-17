@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using VyCustomerSupport.Models.DbModels;
@@ -41,6 +42,8 @@ namespace VyCustomerSupport.DAL
 
             newCategory = new DbCategory {CategoryName = "Vy-Appen"};
             dbContext.Add(newCategory);
+
+            dbContext.SaveChanges();
         }
 
         private static void SeedQandA(DatabaseContext dbContext)
@@ -56,7 +59,7 @@ namespace VyCustomerSupport.DAL
 
                         var categoryTitleFromFile = columns[4];
                         var category = dbContext.Categories.FirstOrDefault(c => c.CategoryName == categoryTitleFromFile);
-                        
+
                         var upVotesFromFile = 0;
                         var downVotesFromFile = 0;
 
