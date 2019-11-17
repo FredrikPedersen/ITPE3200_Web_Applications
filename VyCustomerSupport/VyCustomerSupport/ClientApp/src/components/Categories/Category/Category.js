@@ -2,11 +2,9 @@
 import "./Category.css";
 
 const category = (props) => {
-    const styleClasses = "CategoryBox " + props.backgroundColor;
-    
     return (
-        <div className={styleClasses} onClick={props.clickHandler}>
-            <p>{props.title}</p>
+        <div className="CategoryBox" onClick={props.clickHandler}>
+            <p>{props.title} <i className="fa fa-arrow-right"></i></p>
         </div>
     );
 };
